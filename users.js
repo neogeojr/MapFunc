@@ -13,3 +13,12 @@ const updatedUsers = users.map(({ firstName, lastName, points }) => {
   };
 });
 console.log(updatedUsers)
+
+const updates2 = users
+  .filter(({ points }) => points > PREMIUM_MINIMUM)
+  .map(({firstName, points}) => ({
+    firstName: firstName,
+    points: points,
+  }));
+
+console.log(updates2);
